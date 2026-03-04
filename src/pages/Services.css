@@ -1,0 +1,399 @@
+.services1 {
+  padding: 120px 10%;
+  background: #ffffff;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+.services-hero {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url("/bedroom-kitchen.jpg") center/cover no-repeat;
+  z-index: 0;
+}
+/* Cards wrapper */
+.services-cards {
+  padding: 0 10%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+/* Sparks */
+.hero-sparks span {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: sparkAnim 2s infinite ease-in-out alternate;
+}
+
+@keyframes sparkAnim {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  100% { transform: translateY(-20px) scale(0.5); opacity: 0; }
+}
+
+/* ===============================
+   SERVICE SECTION CONTAINER
+================================= */
+
+.service-container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 160px;     /* BIG space between sections */
+  padding: 70px 50px;
+  border-radius: 16px;
+  transition: background 0.4s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Show animation */
+.service-container.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/* Alternate background colors */
+.service-container:nth-child(odd) {
+  background: #ffffff;
+}
+
+.service-container:nth-child(even) {
+  background: #f6f6f6;
+}
+
+/* Hover effect */
+.service-container:hover {
+  background: #ededed;
+  transform: translateY(-8px);
+}
+
+/* Alternate layout */
+.row-normal {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===============================
+   IMAGE STYLE
+================================= */
+
+.service-image img {
+  width: 560px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
+  transition: transform 0.5s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.06);
+}
+
+/* ===============================
+   CONTENT STYLE
+================================= */
+
+.service-content {
+  max-width: 650px;
+}
+
+.service-content h2 {
+  font-size: 42px;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+.service-content p {
+  font-size: 19px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* ===============================
+   BUTTON
+================================= */
+
+.service-btn {
+  padding: 15px 48px;
+  background: black;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.service-btn:hover {
+  background: #c8a96a;
+  color: white;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 992px) {
+  .service-container {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-content h2 {
+    font-size: 32px;
+  }
+
+  .services-hero {
+    height: 350px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+/* Dark Luxury Section */
+.subunits-section.dark-luxury {
+  padding: 120px 10%;
+  background: #0f0f0f;
+  color: #fff;
+  text-align: center;
+}
+
+/* Header */
+.lux-header h2 {
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.gold-line {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, #c6a55c, #f5e6c4);
+  margin: 10px auto;
+}
+
+.lux-header p {
+  color: #bbb;
+  font-size: 15px;
+  margin-bottom: 70px;
+}
+
+/* Grid */
+.lux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+}
+
+/* Cards */
+.lux-card {
+  padding: 40px 30px;
+  border: 1px solid rgba(198, 165, 92, 0.2);
+  transition: 0.4s ease;
+  position: relative;
+}
+
+.lux-card:hover {
+  border-color: #c6a55c;
+  transform: translateY(-8px);
+}
+
+/* Number Style */
+.lux-number {
+  font-size: 40px;
+  color: rgba(255, 185, 35, 0.2);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.lux-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #f5e6c4;
+}
+
+/* Text */
+.lux-card p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.7;
+}
+
+/* ================================= */
+/* 📱 TABLET RESPONSIVE (992px) */
+/* ================================= */
+
+@media (max-width: 992px) {
+
+  .services1 {
+    padding: 80px 6%;
+  }
+
+  .services-hero {
+    height: 320px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .service-container {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 40px;
+    padding: 50px 20px;
+    margin-bottom: 100px;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-content {
+    max-width: 100%;
+  }
+
+  .service-content h2 {
+    font-size: 30px;
+  }
+
+  .service-content p {
+    font-size: 16px;
+  }
+
+  .services-cards {
+    padding: 0;
+  }
+
+}
+
+
+/* ================================= */
+/* 📱 MOBILE RESPONSIVE (768px) */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .services1 {
+    padding: 60px 20px;
+  }
+
+  .services-hero {
+    height: 260px;
+    border-radius: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .service-container {
+    margin-bottom: 80px;
+  }
+
+  .service-content h2 {
+    font-size: 24px;
+  }
+
+  .service-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .service-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+}
+
+
+/* ================================= */
+/* 📱 SMALL MOBILE (480px) */
+/* ================================= */
+
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  .service-container {
+    padding: 40px 15px;
+  }
+
+  .lux-header h2 {
+    font-size: 24px;
+  }
+
+  .lux-card {
+    padding: 30px 20px;
+  }
+
+}

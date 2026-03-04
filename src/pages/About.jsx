@@ -123,7 +123,7 @@ function About() {
       {/* CTA */}
       <section className="about1-cta about1-fade">
         <h2>Ready to Transform Your Space?</h2>
-        <a href="/contact" className="about1-btn">
+        <a href="/Contact" className="about1-btn">
           Contact Us
         </a>
       </section>

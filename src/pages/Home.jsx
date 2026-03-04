@@ -1,5 +1,5 @@
 import Hero from "../sections/Hero";
-import AboutSec from "../sections/Aboutsec";
+import AboutSec from "../sections/AboutSec";
 import Features from "../sections/Features";
 import HowItWorks from "../sections/HowItWorks";
 import Testimonial from "../sections/Testimonial";

@@ -681,14 +681,14 @@
 
 }
 
-
 /* ---------- Mobile (max 768px) ---------- */
 @media (max-width: 768px) {
 
   /* HERO SECTION */
   .hero1 {
-    min-height: 70vh;
-    padding: 20px;
+    min-height: 60vh;
+    background-position: center center;
+    animation: none;   /* stop zoom on mobile */
   }
 
   .hero-content1 p {
@@ -711,10 +711,9 @@
   }
 
   .hero-logo1 {
-    width: 50px;
-    top: 0px;
-    bottom: 10px;
-    left: 0px;
+    width: 45px;
+    top: 10px;
+    left: 10px;
   }
 
   /* NAVBAR */
@@ -722,16 +721,65 @@
     padding: 15px 20px;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  /* ✅ Make hamburger visible on mobile */
+  .hamburger {
+    display: flex;         /* important! */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 25;
+  }
+
+  .line {
+    width: 25px;
+    height: 3px;
+    background: #5f3703;
+    transition: all 0.3s ease;
+  }
+
+  .rotate1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .rotate2 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .fade {
+    opacity: 0;
+  }
+
+  /* NAV LINKS */
   .nav-links {
-    top: 60px;
-    width: 110%;
-    gap: 20px;
-    border-radius: 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+
+    display: none;   /* hidden by default */
+    z-index: 20;
+  }
+
+  .nav-links.active {
+    display: flex;   /* show when menu is toggled */
   }
 
   .nav-links li {
     text-align: center;
-    top: 20px;
+    width: 100%;
   }
 
   /* SERVICES */
@@ -740,13 +788,17 @@
   }
 
   .services-carousel {
-    height: 400px;
-  }
+  height: auto;
+  flex-direction: column;
+}
 
-  .service-card {
-    width: 260px;
-    height: 320px;
-  }
+.service-card {
+  position: relative;
+  left: auto;
+  transform: none !important;
+  opacity: 1 !important;
+  margin-bottom: 20px;
+}
 
   /* ABOUT */
   .about-container {
@@ -755,10 +807,10 @@
     text-align: center;
   }
 
-  .rotate-360 img {
-    max-width: 250px;
-  }
-
+.rotate-360 img {
+  max-width: 500px;
+  width: 100%;
+}
   .about-text {
     font-size: 16px;
   }

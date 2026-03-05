@@ -43,8 +43,8 @@ function About() {
           To elevate spaces into living works of art through elegant,
           sustainable, and functional design solutions.
         </p>
+         <h2>Vision</h2>
           <p>
-          <h2>Vision</h2>
           To become Mirns most trusted name in interior design by seamlessly 
           integrating creativity, technology, and craftmanship.
           </p>

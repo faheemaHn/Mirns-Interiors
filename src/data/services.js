@@ -64,7 +64,7 @@ const services = [
     title: "Factory Works",
     description:
       "Board cutting, edge banding, pasting, and precision factory finishing works.",
-    bg: "/factory-works.jpg",
+    bg: "/review3.JPG",
     projects: [
        "/projects/bg9.jpg",
         "/projects/custome.jpg",

@@ -2,14 +2,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="site-header">
       <nav className="navbar">
-      
+        {/* Logo */}
+        <Link to="/" className="logo">
+     
+        </Link>
+
         {/* Nav Links */}
-        <ul className={`nav-links ${open ? "open" : ""}`}>
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/services">Services</Link></li>
@@ -18,10 +22,10 @@ function Navbar() {
         </ul>
 
         {/* Hamburger */}
-        <div className="hamburger" onClick={() => setOpen(!open)}>
-          <div className={`line ${open ? "rotate1" : ""}`}></div>
-          <div className={`line ${open ? "fade" : ""}`}></div>
-          <div className={`line ${open ? "rotate2" : ""}`}></div>
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className={`line ${menuOpen ? "rotate1" : ""}`}></span>
+          <span className={`line ${menuOpen ? "fade" : ""}`}></span>
+          <span className={`line ${menuOpen ? "rotate2" : ""}`}></span>
         </div>
       </nav>
     </header>

@@ -1,12 +1,21 @@
 import React from "react";
+import { FaWhatsapp, FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 export default function SocialButtons() {
   const whatsappNumber = "94770866886";
   const defaultMessage = "Hello, can I get more info on this?";
 
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`;
-  const instagramURL = "https://www.instagram.com/yourprofile"; // replace with your Instagram
-  const facebookURL = "https://www.facebook.com/yourpage";      // replace with your Facebook
+  const instagramURL = "https://www.instagram.com/Mirns.Interiors"; 
+  const facebookURL = "https://web.facebook.com/mirnsinteriors/";      
+  const tiktokURL = "https://www.tiktok.com/@mirnsinteriors";      
+
+  const iconButtons = [
+    { url: whatsappURL, bg: "#25d366", icon: <FaWhatsapp /> },
+    { url: instagramURL, bg: "#C13584", icon: <FaInstagram /> },
+    { url: facebookURL, bg: "#1877F2", icon: <FaFacebookF /> },
+    { url: tiktokURL, bg: "#010101", icon: <FaTiktok /> }
+  ];
 
   return (
     <div style={{
@@ -19,68 +28,30 @@ export default function SocialButtons() {
       gap: "10px",
       zIndex: 9999
     }}>
-      {/* WhatsApp */}
-      <a
-        href={whatsappURL}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          backgroundColor: "#25d366",
-          color: "white",
-          padding: "12px 16px",
-          borderRadius: "50px 0 0 20px",
-          fontWeight: "bold",
-          textDecoration: "none",
-          textAlign: "center",
-          fontSize: "16px",
-          boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
-          cursor: "pointer"
-        }}
-      >
-        WhatsApp
-      </a>
-
-      {/* Instagram */}
-      <a
-        href={instagramURL}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          backgroundColor: "#C13584",
-          color: "white",
-          padding: "10px 14px",
-          borderRadius: "50px 0 0 20px",
-          fontWeight: "bold",
-          textDecoration: "none",
-          textAlign: "center",
-          fontSize: "14px",
-          boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
-          cursor: "pointer"
-        }}
-      >
-        Instagram
-      </a>
-
-      {/* Facebook */}
-      <a
-        href={facebookURL}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          backgroundColor: "#1877F2",
-          color: "white",
-          padding: "8px 12px",
-          borderRadius: "50px 0 0 20px",
-          fontWeight: "bold",
-          textDecoration: "none",
-          textAlign: "center",
-          fontSize: "12px",
-          boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
-          cursor: "pointer"
-        }}
-      >
-        Facebook
-      </a>
+      {iconButtons.map((btn, index) => (
+        <a
+          key={index}
+          href={btn.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            width: "40px",        // small circle
+            height: "40px",
+            borderRadius: "50%",
+            backgroundColor: btn.bg,
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 3px 5px rgba(0,0,0,0.2)",
+            cursor: "pointer",
+            fontSize: "18px",     // icon size
+            textDecoration: "none"
+          }}
+        >
+          {btn.icon}
+        </a>
+      ))}
     </div>
   );
 }

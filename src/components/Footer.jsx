@@ -42,11 +42,12 @@ function Footer() {
         {/* column 4 */}
         <div className="footer-col">
           <h3>Contact Us</h3>
-          <p>Email: info@mirnsinteriors.com</p>
-          <p>Phone: +9477 086 6886</p>
+          <p>Email: mirnsinfo@gmail.com</p>
+          <p>Phone: +9476 096 6543</p>
+          <p>       +9477 086 6886</p>
           <div className="social-icons">
-            <a href="https://facebook/MirnsInteriors2025">FB</a>
-            <a href="#">IG</a>
+            <a href="https://web.facebook.com/mirnsinteriors/">FB</a>
+            <a href="https://www.instagram.com/Mirns.Interiors">IG</a>
             <a href="#">WA</a>
           </div>
         </div>
@@ -55,7 +56,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>© 2025 Mirns Interiors. All rights reserved.</p>
-         <p>Faheema Developer</p>
+         <p>Website developed by Faheema Nawasdeen (Frontend Developer).</p>
       </div>
       
     </footer>
